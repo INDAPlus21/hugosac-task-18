@@ -30,14 +30,10 @@ fn main() {
             // Start of test
             lines = _line.parse::<usize>().unwrap();
             curr_line += 1;
-        }
-
-        else if curr_line <= lines {
+        } else if curr_line <= lines {
             patterns.push(_line.to_string());
             curr_line += 1;
-        }
-
-        else {
+        } else {
             // End of test
             for pattern in &patterns {
                 let occ = find_matches(&_line, &pattern, 0, String::from(""));
